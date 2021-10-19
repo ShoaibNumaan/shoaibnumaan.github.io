@@ -1,5 +1,5 @@
 const textDisplay = document.getElementById('typer')
-const phrases = ['Fresher', 'Software Developer', 'Front-End Developer','AND I LOVE TO CODE']
+const phrases = ['Incoming Python Developer', 'Junior Software Develover', 'Front-End Developer']
 let i = 0
 let j = 0 
 let currentPhrase = []
