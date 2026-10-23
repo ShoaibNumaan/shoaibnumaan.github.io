@@ -1,0 +1,100 @@
+/* First visit defaults to light; dark retains the interactive palette. */
+html{color-scheme:dark}
+/* Use native scrolling and a solid sticky header on Safari/WebKit. */
+html.safari{scroll-behavior:auto}
+html.safari .site-header{backdrop-filter:none;-webkit-backdrop-filter:none;background:#0b1020}
+html.safari[data-theme=light] .site-header{background:#f7f9ff}
+.header-controls{display:flex;align-items:center;gap:10px;order:3}
+.site-header nav{margin-left:auto}
+.theme-toggle{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:9px 12px;min-height:42px;background:#19263e;color:#e8f1ff;border:1px solid #40516e;border-radius:9px;font-size:12px;font-weight:500}
+.theme-toggle:hover{background:#2b3b56}.theme-icon{font-size:19px;line-height:1}
+html[data-theme=light]{color-scheme:light;--paper:#f7f9ff;--ink:#18253e;--muted:#53637c;--line:#ced8ea;--green:#006e77;--lime:#c6f5e8;--cyan:#007d85;--violet:#6650b9;--panel:#ffffff}
+html[data-theme=light] body{background:radial-gradient(ellipse 70% 650px at 85% 130px,#dcd4ff65,transparent),radial-gradient(ellipse 60% 450px at 5% 600px,#bcf2e544,transparent),var(--paper)}
+html[data-theme=light] .site-header{background:#f7f9fff0;border-color:#ced8ea}
+html[data-theme=light] .theme-toggle,html[data-theme=light] .site-header nav .nav-contact,html[data-theme=light] .js .menu-toggle{background:#e9effa;color:#243650;border-color:#bdcbe1}
+html[data-theme=light] .theme-toggle:hover,html[data-theme=light] .site-header nav .nav-contact:hover{background:#dbe6f7;color:#18253e}
+html[data-theme=light] .availability{color:#126457}
+html[data-theme=light] .status-dot,html[data-theme=light] .tiny-dot{background:#16806b}
+html[data-theme=light] .hero .serif-word{color:transparent;background-image:linear-gradient(110deg,#007769,#006aa2 50%,#7350b8)}
+html[data-theme=light] .hero-description,html[data-theme=light] .hero-meta,html[data-theme=light] .section-heading>p{color:#53637c}
+html[data-theme=light] .hero-meta strong{color:#18253e}
+html[data-theme=light] .hero-role{color:#35607b}
+html[data-theme=light] .resume-link{color:#253e61}
+html[data-theme=light] .button-dark{background:linear-gradient(110deg,#116b78,#3d56a3);color:#ffffff;box-shadow:0 5px 22px #29517e20}
+html[data-theme=light] .button-dark:hover{background:linear-gradient(110deg,#075662,#50459b);color:#ffffff}
+html[data-theme=light] .ai-explorer{--explorer-accent:#006e77;background:radial-gradient(ellipse at 90% 0,#ddd5ff75,transparent 60%),linear-gradient(150deg,#ffffff,#edf4fc);border-color:#b7c6e1;box-shadow:0 20px 60px #38538615,inset 0 1px #ffffff}
+html[data-theme=light] .explorer-label,html[data-theme=light] .ai-explorer h2>span{color:#506280}
+html[data-theme=light] .explorer-intro,html[data-theme=light] .explorer-footnote{color:#576c87}
+html[data-theme=light] .capability-tabs button{background:#eaf0fa;border-color:#c0cde3;color:#596f8e}
+html[data-theme=light] .capability-tabs button>span{color:#304460}
+html[data-theme=light] .capability-tabs button[aria-pressed=true]{background:#d9eeeF;border-color:#167782;box-shadow:inset 0 -2px #167782}
+html[data-theme=light] .capability-tabs button[aria-pressed=true]>span{color:#154c55}
+html[data-theme=light] .capability-panel{--explorer-accent:#006e77}
+html[data-theme=light] .capability-tabs:has(button[data-capability=agents][aria-pressed=true])~.capability-panel{--explorer-accent:#6550a8}
+html[data-theme=light] .capability-tabs:has(button[data-capability=observe][aria-pressed=true])~.capability-panel{--explorer-accent:#117653}
+html[data-theme=light] .workflow-icon{background:#e5ecf7;border-color:#b9cbe1;color:#355c84}
+html[data-theme=light] .workflow-center .workflow-icon{background:var(--explorer-accent);color:#ffffff;box-shadow:0 0 25px #4d8aa522}
+html[data-theme=light] .workflow strong{color:#334e70}
+html[data-theme=light] .capability-panel>p{color:#4c6480}
+html[data-theme=light] .capability-stack span{background:#e5edf8;border-color:#bfcee3;color:#345877}
+html[data-theme=light] .capability-panel>a{border-color:#c5d1e3}
+html[data-theme=light] .proof-strip,html[data-theme=light] .international-fit{background:#edf3fc;border-color:#c1cfe5}
+html[data-theme=light] .proof-strip>div{border-color:#c5d1e3}
+html[data-theme=light] .hiring-brief-heading>p:last-child{color:#50617b}
+html[data-theme=light] .hiring-strengths>a,html[data-theme=light] .project-card{background:linear-gradient(135deg,#ffffff,#f0f5fc);border-color:#c0cee3}
+html[data-theme=light] .hiring-strengths>a:hover,html[data-theme=light] .project-card:hover,html[data-theme=light] .project-card:focus-within{border-color:#5e89b8;box-shadow:0 12px 35px #38538615}
+html[data-theme=light] .hiring-strengths>a>span{color:#4d678a}
+html[data-theme=light] .hiring-strengths p{color:#526780}
+html[data-theme=light] .hiring-strengths strong,html[data-theme=light] .international-fit>span{color:#006e77}
+html[data-theme=light] .international-fit strong{color:#203751}
+html[data-theme=light] .international-fit p>span{color:#526780}
+html[data-theme=light] .international-fit>a{color:#24648c}
+html[data-theme=light] .eyebrow,html[data-theme=light] .work-note,html[data-theme=light] .additional-label{color:#546b90}
+html[data-theme=light] .serif-word{color:#6554a9}
+html[data-theme=light] .filters{background:#eaf0fa;border-color:#c1cfe5}
+html[data-theme=light] .filters button[aria-pressed=true]{background:#263e65;color:#ffffff}
+html[data-theme=light] .filters button:not([aria-pressed=true]):hover{background:#d7e3f6;color:#243650}
+html[data-theme=light] .project-body>p:not(.project-type),html[data-theme=light] .project-detail p{color:#536680}
+html[data-theme=light] .project-type{color:#176d71}
+html[data-theme=light] .project-type>span{color:#5b6e88}
+html[data-theme=light] .tags span{background:#e9eff8;border-color:#c7d3e5;color:#405b7c}
+html[data-theme=light] .project-body details{border-color:#c5d1e3}
+html[data-theme=light] summary{color:#264b73}
+html[data-theme=light] summary>span{border-color:#9bb7d5}
+html[data-theme=light] details[open] summary>span{background:#dcebf8}
+html[data-theme=light] .project-detail h4{color:#294b73}
+html[data-theme=light] .compact-project,html[data-theme=light] .skills-grid>div{background:#edf3fc;border-color:#c0cee3}
+html[data-theme=light] .compact-number,html[data-theme=light] .skill-index{color:#4e6ca5}
+html[data-theme=light] .project-footnote{color:#536b8c}
+html[data-theme=light] .about-section{background:radial-gradient(ellipse at 5% 80%,#d8ceff44,transparent),#edf2fb;border-color:#c5d1e3}
+html[data-theme=light] .about-copy>p.about-intro{color:#243c61}
+html[data-theme=light] .about-signature{color:#4c5794}
+html[data-theme=light] .about-signature>span{color:#006e77}
+html[data-theme=light] .about-location{color:#556c8c}
+html[data-theme=light] .about-principles{color:#126b67;border-color:#bccce3}
+html[data-theme=light] .experience-item{border-color:#c5d1e3}
+html[data-theme=light] .current-label{background:#d5eee4;color:#1b684f}
+html[data-theme=light] .skills-grid h3{color:#243d62}
+html[data-theme=light] .skills-grid p{color:#526780}
+html[data-theme=light] .credentials{border-color:#c1cfe5}
+html[data-theme=light] .credential-tags span{background:#e9effa;border-color:#c1cfe5;color:#465e80}
+html[data-theme=light] .contact-section{background:radial-gradient(ellipse at 100% 30%,#ddd4fc65,transparent),linear-gradient(125deg,#e9f5f6,#eff0fc);border-color:#bdd1e4;color:#1d3451}
+html[data-theme=light] .contact-intro h2,html[data-theme=light] .contact-option h3,html[data-theme=light] .contact-direct .email-link{color:#1d3451}
+html[data-theme=light] .contact-section .serif-word{color:#13756b}
+html[data-theme=light] .contact-intro>p:last-child,html[data-theme=light] .contact-option>p{color:#405a77}
+html[data-theme=light] .contact-section .eyebrow,html[data-theme=light] .contact-section .option-index,html[data-theme=light] .email-kicker{color:#426887}
+html[data-theme=light] .contact-option{background:#ffffff8f;border-color:#b4c8df}
+html[data-theme=light] .contact-section .text-link,html[data-theme=light] .contact-direct>div{color:#275d83}
+html[data-theme=light] .contact-section a:not(.button):hover{color:#0b636e}
+html[data-theme=light] .button-light{background:linear-gradient(120deg,#116b78,#3d56a3);color:#ffffff}
+html[data-theme=light] .button-light:hover{background:#224a78;color:#ffffff}
+html[data-theme=light] .contact-direct{border-color:#b3c8df}
+html[data-theme=light] .email-arrow{color:#14776e}
+html[data-theme=light] .email-address:after{background:linear-gradient(90deg,#14776e,#7156b3)}
+html[data-theme=light] .email-link:hover .email-address,html[data-theme=light] .email-link:focus-visible .email-address{color:#0f6c67;text-shadow:0 0 24px #249b7920}
+html[data-theme=light] .copy-email{background:#e4edf7;border-color:#9ab2cc;color:#26496f}
+html[data-theme=light] .copy-email:hover{background:#d5e5f5}
+html[data-theme=light] .email-feedback{color:#496585}
+html[data-theme=light] footer p,html[data-theme=light] footer>a:last-child{color:#526780}
+html[data-theme=light] .menu-toggle{background:#e9effa;color:#243650;border-color:#bdcbe1}
+@media(max-width:640px){.header-controls{order:0;margin-left:auto;gap:7px}.site-header nav{margin-left:0}.theme-toggle{padding:8px 10px;min-height:40px;border-radius:6px}.theme-label{display:none}}
