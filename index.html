@@ -1,317 +1,123 @@
 <!DOCTYPE html>
-<html class="no-js" lang="en">
-
+<html lang="en" data-theme="light">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>My Portfolio</title>
-	<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-	<link rel="icon" href="favicon.ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
-    <link rel="stylesheet" href="libs/font-awesome/css/font-awesome.min.css">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/styles.css" rel="stylesheet">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f9ff">
+  <script>
+    // Safari can stall native scrolling with smooth scroll and a blurred sticky header.
+    if (/AppleWebKit/.test(navigator.userAgent) && !/Chrome|Chromium|CriOS|Edg|OPR|FxiOS|Android/.test(navigator.userAgent)) {
+      document.documentElement.classList.add('safari');
+    }
+    try {
+      if (localStorage.getItem('numaan-theme') === 'dark') {
+        document.documentElement.dataset.theme = 'dark';
+        document.querySelector('meta[name="theme-color"]').content = '#0b1020';
+      }
+    } catch {}
+  </script>
+  <title>Numaan Baig — Enterprise AI Engineer & Consultant</title>
+  <meta name="description" content="Numaan Baig, AI Consultant at IBM. Enterprise GenAI, agentic workflows, RAG and AI observability. Open to international AI engineering roles, relocation, remote work and select freelance engagements.">
+  <link rel="canonical" href="https://shoaibnumaan.github.io/">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Numaan Baig — AI that works in the real world.">
+  <meta property="og:description" content="Enterprise AI engineering, agentic workflows and practical delivery. Explore my work and let's build what's next.">
+  <meta property="og:url" content="https://shoaibnumaan.github.io/">
+  <meta property="og:image" content="https://shoaibnumaan.github.io/images/social-preview.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" href="images/monogram.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/interactive.css">
+  <link rel="stylesheet" href="css/themes.css">
+  <script src="js/scripts.js" defer></script>
 </head>
-
 <body>
-    <div id="mobile-menu-open" class="shadow-large">
-        <i class="fa fa-bars" aria-hidden="true"></i>
-    </div>
-    <!-- End #mobile-menu-toggle -->
-    <header>
-        <div id="mobile-menu-close">
-            <span>Close</span> <i class="fa fa-times" aria-hidden="true"></i>
+  <div class="reading-progress" aria-hidden="true"></div>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="#lead" aria-label="Numaan Baig, home"><span class="monogram">nb<span>.</span></span><span>Numaan Baig<span class="brand-role">AI ENGINEER & CONSULTANT</span></span></a>
+    <div class="header-controls"><button class="theme-toggle" type="button" aria-label="Dark theme" aria-pressed="false" hidden><span class="theme-icon" aria-hidden="true">☾</span><span class="theme-label">Dark</span></button><button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">☰</span></button></div>
+    <nav id="navigation" aria-label="Main navigation"><a href="#projects">Selected work</a><a href="#about">About</a><a href="#experience">Experience</a><a class="nav-contact" href="#contact">Let’s talk <span aria-hidden="true">↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero section-wrap" id="lead" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="availability"><span class="status-dot"></span> Open to international AI roles · Relocation & remote</p>
+        <h1 id="hero-title">AI that works<br>in the <span class="serif-word">real world.</span></h1>
+        <p class="hero-role">ENTERPRISE AI ENGINEER · AI CONSULTANT AT IBM</p>
+        <p class="hero-description">I’m Numaan, an AI consultant with 4+ years in enterprise delivery. I build RAG applications and agentic workflows, lead technical initiatives, and help teams take GenAI from business requirements to deployed systems.</p>
+        <div class="hero-actions"><a class="button button-dark" href="#projects">See what I’ve delivered <span aria-hidden="true">↗</span></a><a class="resume-link" href="https://bit.ly/resumeJan2023" target="_blank" rel="noopener">View resume <span aria-hidden="true">↗</span><span class="sr-only"> (PDF, opens in a new tab)</span></a></div>
+        <div class="hero-meta"><span><span class="tiny-dot"></span> Bengaluru, India</span><span>Currently AI Consultant @ <strong>IBM</strong></span></div>
+      </div>
+      <div class="ai-explorer" aria-labelledby="explorer-title">
+        <div class="explorer-top"><span class="explorer-label"><span class="status-dot"></span> EXPLORE MY ENGINEERING</span><span class="explorer-mark" aria-hidden="true">⌘</span></div>
+        <h2 id="explorer-title">One problem.<br><span>Many connected systems.</span></h2>
+        <p class="explorer-intro">Choose a capability to see how I approach it.</p>
+        <div class="capability-tabs" role="group" aria-label="Explore AI capabilities">
+          <button type="button" data-capability="rag" aria-pressed="true" aria-controls="capability-panel">01 <span>Knowledge AI</span></button>
+          <button type="button" data-capability="agents" aria-pressed="false" aria-controls="capability-panel">02 <span>AI agents</span></button>
+          <button type="button" data-capability="observe" aria-pressed="false" aria-controls="capability-panel">03 <span>Observability</span></button>
         </div>
-        <ul id="menu" class="shadow">
-            <li>
-                <a href="#about">About</a>
-            </li>
-            <li>
-                <a href="#projects">Projects</a>
-            </li>
-            <li>
-                <a href="#education">Education</a>
-            </li>
-            <li>
-                <a href="#experience">Experience</a>
-            </li>
-            <li>
-                <a href="#skills">Skills</a>
-            </li>
-            <li>
-                <a href="#contact">Contact</a>
-            </li>
-        </ul>
-    </header>
-    <!-- End header -->
-
-    <div id="lead">
-        <div id="lead-content">
-            <h1>Numaan Baig</h1>
-            <p><h2 id="typer"></h2></p><br><br>
-            <a target="_blank" href="https://bit.ly/resumeJan2023" class="btn-rounded-white">Download Resume</a>
+        <div id="capability-panel" class="capability-panel" aria-live="polite" aria-atomic="true">
+          <div class="workflow-label"><span id="capability-label">KNOWLEDGE → CONTEXT → ANSWERS</span><span aria-hidden="true">↗</span></div>
+          <div class="workflow" aria-hidden="true"><div><span class="workflow-icon" id="flow-icon-one">▤</span><strong id="flow-one">Your data</strong></div><span class="workflow-connector">→</span><div class="workflow-center"><span class="workflow-icon">✳</span><strong id="flow-two">Retrieve & reason</strong></div><span class="workflow-connector">→</span><div><span class="workflow-icon" id="flow-icon-three">↗</span><strong id="flow-three">Useful answers</strong></div></div>
+          <h3 id="capability-title">Make enterprise knowledge accessible.</h3>
+          <p id="capability-copy">Connect natural-language questions to business data with retrieval, knowledge graphs and conversational interfaces.</p>
+          <div class="capability-stack" id="capability-stack"><span>Azure OpenAI</span><span>Neo4j</span><span>FastAPI</span></div>
+          <a href="#projects" id="capability-work">Explore related work <span aria-hidden="true">↗</span></a>
         </div>
-        <!-- End #lead-content -->
-
-        <div id="lead-overlay"></div>
-
-        <div id="lead-down">
-            <span>
-                <i class="fa fa-chevron-down" aria-hidden="true"></i>
-            </span>
-        </div>
-        <!-- End #lead-down -->
-    </div>
-    <!-- End #lead -->
-
-    <div id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-4">
-                    <h2 class="heading">About Me</h2>
-                </div>
-                <div class="col-md-8">
-                    <p>
-                        Senior Data & AI Consultant with 4+ years of experience designing and deploying enterprise AI/GenAI solutions. Specialized in building intelligent workflows, RAG architectures, and LLM-powered applications that drive operational efficiency. Proven track record of leading technical initiatives, mentoring engineers, and translating business requirements into scalable AI solutions. Passionate about emerging AI technologies and committed to continuous learning in the rapidly evolving GenAI landscape.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- End #about -->
-
-    <div id="projects" class="background-alt">
-        <h2 class="heading">Projects</h2>
-        <div class="container">
-            <div class="row">
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Liya - Enterprise Financial Data Insights Platform</h3>
-                        <p>
-                            Led end-to-end delivery of a conversational AI platform enabling business users to query financial data in natural language. Designed RAG architecture with Neo4j vector storage for high-accuracy insights, implemented prompt engineering strategies, and optimized LLM interactions for enterprise-grade performance.</br>
-			    	        <b><u>TechStack:</u></b>Python, FastAPI, Prompt Engineering, Azure OpenAI, Llama, Neo4j, RAG Architecture.
-                        </p>
-                        <a target="_blank" href="https://github.com/ShoaibNumaan">View Portfolio</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Three Stripes - GenAI DevOps Productivity Suite</h3>
-                        <p>
-                            Architected and led development of cutting-edge productivity suite leveraging foundation models to revolutionize DevOps workflows. Built intelligent agents using LangGraph for complex task orchestration, implemented LLM evaluation frameworks (Ragas), and designed prompt engineering strategies for optimal developer experience.</br>
-			    	        <b><u>TechStack:</u></b>Python, Flask, LangGraph, Prompt Engineering, Ragas, Azure OpenAI, Agentic Workflows.
-                        </p>
-                        <a target="_blank" href="https://github.com/ShoaibNumaan">View Portfolio</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-                
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>FoodWise - Multi-lingual Conversational AI</h3>
-                        <p>
-                            Led development of intelligent conversational AI assistant powered by LLMs and vision models for menu discovery, product comparison, and post-order support. Implemented multi-lingual capabilities, optimized LLM prompting strategies, and integrated LLM evaluation framework (Ragas) for continuous quality improvement.</br>
-				        <b><u>TechStack:</u></b>Python, Flask, LangChain, Prompt Engineering, Ragas, Azure OpenAI, Vision Models.
-                        </p>
-                        <a target="_blank" href="https://github.com/ShoaibNumaan">View Portfolio</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Chat @ X - Enterprise Secure AI Chat Solution</h3>
-                        <p>
-                            Contributed to development of enterprise-grade secure AI chat platform designed to enhance workplace productivity. Integrated Azure Cognitive Services, Azure AI Search, and Azure OpenAI to deliver intelligent document processing and conversational capabilities. Focused on security compliance and scalable architecture for organization-wide deployment.</br>
-				        <b><u>TechStack:</u></b>Python, Azure Functions, Azure Cognitive Search, Azure Form Recognizer, Azure OpenAI.
-                        </p>
-                        <a target="_blank" href="https://github.com/ShoaibNumaan">View Portfolio</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-
-                <div class="project shadow-large">
-                    <div class="project-image">
-                        <img src="images/project.jpg" />
-                    </div>
-                    <!-- End .project-image -->
-                    <div class="project-info">
-                        <h3>Intelligent Utility - ML Framework for Energy Analytics</h3>
-                        <p>
-                            Contributed to development of comprehensive AI/ML framework for utility sector enabling outage detection, household usage forecasting, billing prediction and predictive maintenance. Designed data pipelines, implemented machine learning models, and created interactive Power BI dashboards for actionable insights across distributed systems.</br>
-				            <b><u>TechStack:</u></b>Python, Flask API, Azure ML Studio, Power BI, Azure Table Storage, Azure VMs, PySpark.
-                        </p>
-                        <a target="_blank" href="https://github.com/ShoaibNumaan">View Portfolio</a>
-                    </div>
-                    <!-- End .project-info -->
-                </div>
-                <!-- End .project -->
-            </div>
-        </div>
-    </div>
-    <!-- End #projects -->
-
-    <div id="education">
-        <h2 class="heading">Education & Certifications</h2>
-        <div class="education-block">
-            <h3>Bachelor of Engineering in Computer Science</h3>
-            <span class="education-date">August 2017 - August 2021</span>
-            <h4>Dr. T Thimmaiah Institute of Technology</h4>
-            <ul>
-                <li>
-                    Visvesvaraya Technological University
-                </li>
-                <li>
-                    CGPA: 8.15/10
-                </li>
-                <li>
-                    Kolar, Karnataka, India
-                </li>
-            </ul>
-        </div>
-        <!-- End .education-block -->
-
-        <div class="education-block">
-            <h3>Professional Certifications</h3>
-            <span class="education-date">2023 - 2024</span>
-            <ul>
-                <li>Azure AI 102: Design and Implement Azure AI Solutions</li>
-                <li>Azure AI 900: Azure AI Fundamentals</li>
-                <li>Azure AZ 900: Azure Fundamentals</li>
-                <li>Databricks Lakehouse Fundamentals</li>
-                <li>Docker for DevOps Engineers</li>
-            </ul>
-        </div>
-        <!-- End .education-block -->
-    </div>
-    <!-- End #education -->
-
-    <div id="experience" class="background-alt">
-        <h2 class="heading">Experience</h2>
-        <div id="experience-timeline">
-            <div data-date="February 2022 - Present">
-                <h3>Neudesic, an IBM Company – Bangalore (India)</h3>
-                <h4>Senior Data & AI Consultant</h4>
-                <p>
-                    <b>Leadership & Strategy:</b> Lead consulting engagements translating business requirements into enterprise AI/GenAI solutions, driving operational efficiency improvements across Fortune 500 clients. Tech Lead for internal Agentic SDLC initiative, designing intelligent workflows for Azure DevOps, Jira, and Asana integration.
-                </p>
-                <p>
-                    <b>GenAI & LLM Expertise:</b> Architect and deploy scalable GenAI applications leveraging LLMs/SLMs, AI orchestrators, and RAG architectures with vector databases (Neo4j, Weaviate, ChromaDB). Implement advanced prompt engineering techniques and LLM reasoning optimization for high-accuracy query responses.
-                </p>
-                <p>
-                    <b>Engineering Leadership:</b> Conducted internal GenAI training programs equipping consultants with prompt engineering, LLM advanced techniques, and GitHub Copilot best practices. Mentor engineers on RAG architecture design and LLM evaluation frameworks.
-                </p>
-            </div>
-
-            <div data-date="November 2021 - February 2022">
-                <h3>Ushur – Bangalore (India)</h3>
-                <h4>SRE Intern</h4>
-                <p>
-                    Collaborated with DevOps teams on infrastructure monitoring, upgraded Zabbix monitoring templates and enhanced alerting logic for RabbitMQ, MongoDB, and critical system metrics using Dynatrace for improved observability.
-                </p>
-            </div>
-
-            <div data-date="March 2021 - October 2021">
-                <h3>Projects House for Engineering Consultancy – Kuwait (KSA)</h3>
-                <h4>Software Developer</h4>
-                <p>
-                    Developed UI components for Autonomous Wheelchair navigation system, collaborating with cross-functional team to deliver user-centric interface solutions.
-                </p>
-            </div>
-        </div>
-    </div>
-    <!-- End #experience -->
-
-    <div id="skills">
-        <h2 class="heading">Technical Skills</h2>
-        <ul>
-            <li><b>GenAI & LLMs:</b> LangChain, LangGraph, RAG Architecture, Prompt Engineering, LLM Evaluation (Ragas), Azure OpenAI, Llama</li>
-            <li><b>Programming:</b> Python, PySpark, C#, C, C++, JavaScript</li>
-            <li><b>Backend Frameworks:</b> FastAPI, Flask, Azure Function App, Django</li>
-            <li><b>ML & Data Science:</b> Machine Learning, Pandas, Numpy, Matplotlib, PySpark ML</li>
-            <li><b>Databases & Vector Stores:</b> SQL Server, Azure Cosmos DB, Neo4j, ChromaDB, Weaviate, MongoDB</li>
-            <li><b>Azure Cloud Services:</b> Azure OpenAI, Azure Cognitive Services, Azure AI Services, Azure ML Studio, Azure Databricks, Azure Synapse, Azure Functions, Azure Table Storage</li>
-            <li><b>Analytics & BI:</b> Power BI, Tableau</li>
-            <li><b>DevOps & Tools:</b> Git, GitHub Copilot, Docker, Zabbix, Dynatrace, Redis Cache, Claude Code</li>
-        </ul>
-    </div>
-    <!-- End #skills -->
-
-    <div id="contact">
-        <h2>Get in Touch</h2>
-        <div id="contact-form">
-            <form action="https://formspree.io/f/xrgdvyzk" method="POST">
-                <input type="hidden" name="_subject" value="Contact request from personal website" />
-                <input type="email" name="_replyto" placeholder="Your email" required>
-                <textarea name="message" placeholder="Your message" required></textarea>
-                <button type="submit">Send</button>
-            </form>
-        <h3>Email</h3>
-        <p>numaangj@gmail.com</p>
-        <h3>Phone</h3>
-        <p>+91 9008560282</p>
-        <h3>Location</h3>
-        <p>Bangalore, Karnatake 563122</p>
-        </div>
-        <!-- End #contact-form -->
-    </div>
-    <!-- End #contact -->
-
-    <footer>
-        <div class="container">
-            <div class="row">
-                <div class="col-sm-5 copyright">
-                    <p>
-                        Copyright &copy; 2026 NUMAAN BAIG
-                    </p>
-                </div>
-                <div class="col-sm-2 top">
-                    <span id="to-top">
-                        <i class="fa fa-chevron-up" aria-hidden="true"></i>
-                    </span>
-                </div>
-                <div class="col-sm-5 social">
-                    <ul>
-                        
-                        <li>
-                            <a href="https://www.linkedin.com/in/m-shoaib-numaanulla-b-7b64a510b/" target="_blank"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://github.com/ShoaibNumaan" target="_blank"><i class="fa fa-github" aria-hidden="true"></i></a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- End footer -->
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script src="js/scripts.min.js"></script>
-    <script src="js/type.js"></script>
+        <p class="explorer-footnote">A walkthrough of my approach, illustrated through my project work.</p>
+      </div>
+    </section>
+    <div class="proof-strip section-wrap"><p>Hands-on experience.<br><strong>Enterprise perspective.</strong></p><div><strong>4+<span>years</span></strong><small>IN AI & DATA CONSULTING</small></div><div><strong>IBM <span>/ Neudesic</span></strong><small>ENTERPRISE DELIVERY EXPERIENCE</small></div><div><strong>Build → Deploy → Improve</strong><small>THE FULL APPLICATION LIFECYCLE</small></div></div>
+    <section class="hiring-brief section-wrap" aria-labelledby="hiring-title">
+      <div class="hiring-brief-heading"><p class="eyebrow">FOR TEAMS BUILDING ENTERPRISE AI</p><h2 id="hiring-title">Where I can contribute.</h2><p>I’m targeting AI Engineer, GenAI Engineer and Applied AI Engineer roles, bringing hands-on development and consulting experience.</p></div>
+      <div class="hiring-strengths">
+        <a href="#project-agents"><span>01 / TECHNICAL LEADERSHIP</span><h3>Move agentic workflows into delivery.</h3><p>Tech Lead for internal Agentic SDLC; led a GenAI DevOps suite’s development and GenAI training.</p><strong>See the leadership work ↗</strong></a>
+        <a href="#project-liya"><span>02 / APPLICATION ENGINEERING</span><h3>Connect business data to useful AI.</h3><p>Led financial AI platform delivery and FoodWise development, with experience across retrieval, APIs and conversational interfaces.</p><strong>See the application work ↗</strong></a>
+        <a href="#project-migration"><span>03 / ENTERPRISE FOUNDATIONS</span><h3>Work beyond the model.</h3><p>Built migration and ingestion workflows, designed dbt deployment pipelines, and researched AI monitoring signals.</p><strong>See the data delivery work ↗</strong></a>
+      </div>
+      <div class="international-fit"><span aria-hidden="true">◎</span><p><strong>Open to relocation & remote opportunities</strong><span>Based in Bengaluru, India · Targeting the Gulf, Europe and the US · English: fluent</span></p><a href="#contact">Discuss a role ↗</a></div>
+    </section>
+    <section class="work section-wrap section-space" id="projects" aria-labelledby="work-title">
+      <div class="section-heading"><div><p class="eyebrow">01 / SELECTED WORK</p><h2 id="work-title">Real problems. <span class="serif-word">Thoughtful solutions.</span></h2></div><p>Delivery and leadership first.<br class="desktop-break"> My role is stated for every project.</p></div>
+      <div class="work-toolbar"><div class="filters" role="group" aria-label="Filter projects" hidden><button type="button" data-filter="all" aria-pressed="true">All work <span>7</span></button><button type="button" data-filter="genai" aria-pressed="false">GenAI & agents</button><button type="button" data-filter="data" aria-pressed="false">Data & observability</button></div><span class="work-note">BUILT IN ENTERPRISE ENVIRONMENTS</span></div>
+      <div class="project-grid">
+        <article id="project-agents" class="project-card" data-category="genai">
+          <div class="project-art art-agents" aria-hidden="true"><div class="art-caption">AGENTIC WORKFLOWS / DEVELOPER PRODUCTIVITY</div><div class="agent-flow"><span class="flow-input">An idea worth building</span><span class="flow-line"></span><span class="agent-hub">✳<small>AGENTIC SDLC</small></span><div class="agent-outputs"><span>Azure DevOps</span><span>Jira</span><span>Asana</span></div></div><div class="art-bottom"><span>01</span><span>From intent to structured work. ↗</span></div></div>
+          <div class="project-body"><p class="project-type">AGENTIC AI <span>TECH LEAD</span></p><h3>Agentic SDLC & GenAI DevOps Suite</h3><p>Turning software delivery requirements into structured work, with AI workflows that support engineering teams.</p><div class="tags"><span>LangGraph</span><span>Azure OpenAI</span><span>Ragas</span></div><details><summary>Read project details <span aria-hidden="true">+</span></summary><div class="project-detail"><h4>My leadership</h4><p>Served as Tech Lead for Neudesic’s internal Agentic SDLC initiative, designing workflows to generate structured work items for Azure DevOps, Jira and Asana.</p><h4>Related delivery</h4><p>Led development of a GenAI DevOps Suite, a productivity platform for the DevOps journey, using Python, Flask, LangGraph, Ragas and Azure OpenAI.</p><h4>Team enablement</h4><p>Led internal training on GenAI, prompt engineering, reasoning models and GitHub Copilot.</p></div></details></div>
+        </article>
+        <article id="project-liya" class="project-card" data-category="genai">
+          <div class="project-art art-knowledge" aria-hidden="true"><div class="art-caption">NATURAL LANGUAGE / ENTERPRISE KNOWLEDGE</div><div class="knowledge-demo"><div class="chat-question">“What is our financial data telling us?” <span>↗</span></div><div class="retrieval-path"><span>Question</span><i>→</i><span>Retrieve</span><i>→</i><span>Reason</span></div><div class="chat-answer"><span class="answer-icon">✳</span><div><strong>Make complex data conversational.</strong><span class="skeleton"></span><span class="skeleton short"></span><small>Business context, connected.</small></div></div></div><div class="art-bottom"><span>02</span><span>Better access to business knowledge. ↗</span></div></div>
+          <div class="project-body"><p class="project-type">CONVERSATIONAL AI <span>DELIVERY LEAD</span></p><h3>Financial Insights Assistant</h3><p>Helping business users explore enterprise financial data through natural language and conversational insights.</p><div class="tags"><span>FastAPI</span><span>Azure OpenAI</span><span>Neo4j</span></div><details><summary>Read project details <span aria-hidden="true">+</span></summary><div class="project-detail"><h4>The challenge</h4><p>Make complex financial data more accessible to business users through a conversational interface.</p><h4>My contribution</h4><p>Led delivery of an enterprise financial data insights platform built with Python, FastAPI, Azure OpenAI, Llama and Neo4j.</p><h4>Further contribution · December 2025–March 2026</h4><p>Joined during delivery, explored LLM integrations and Gremlin-based knowledge graph retrieval, researched response reliability, and contributed bug fixes.</p><h4>Delivery focus</h4><p>Natural-language queries and actionable conversational insights from enterprise data.</p></div></details></div>
+        </article>
+        <article id="project-migration" class="project-card" data-category="data">
+          <div class="project-art art-migration" aria-hidden="true"><div class="art-caption">DATA ENGINEERING / SPEC-DRIVEN DEVELOPMENT</div><div class="migration-flow"><div class="platform-block"><span>▤</span><strong>Databricks</strong><small>NOTEBOOKS & PIPELINES</small></div><div class="migration-arrow"><span>SPEC → BUILD → VERIFY</span><b>⟶</b></div><div class="platform-block"><span>≋</span><strong>RisingWave</strong><small>STREAMING DATA</small></div></div><div class="migration-labels"><span>Kafka ingestion</span><span>AI-assisted migration</span><span>dbt deployment</span></div><div class="art-bottom"><span>03</span><span>Modernize the data foundation. ↗</span></div></div>
+          <div class="project-body"><p class="project-type">DATA PLATFORMS <span>2026 · CONTRIBUTOR</span></p><h3>Databricks → RisingWave</h3><p>AI-assisted migration of notebooks and pipelines, bringing a specification-driven approach to streaming data workloads.</p><div class="tags"><span>RisingWave</span><span>Kafka</span><span>dbt</span><span>SDD</span></div><details><summary>Read project details <span aria-hidden="true">+</span></summary><div class="project-detail"><h4>The challenge</h4><p>Migrate Databricks notebooks and data pipelines while maintaining data consistency across environments.</p><h4>My contribution</h4><p>Built AI-powered workflows for notebook updates, error mitigation, impact analysis and comparison reports. Helped onboard Kafka topics and implemented ingestion for sources without native RisingWave connectors.</p><h4>Delivery</h4><p>Designed dbt pipelines for deployment and promotion across environments, and supported testing, troubleshooting and release activities.</p></div></details></div>
+        </article>
+        <article id="project-observability" class="project-card" data-category="data">
+          <div class="project-art art-observe" aria-hidden="true"><div class="art-caption">OBSERVABILITY / EVALUATION / RELIABILITY</div><div class="observe-window"><div class="window-top"><span><i></i><i></i><i></i></span><span>AI system signals</span></div><div class="signal-row"><span>LLM traces</span><span class="signal-bars"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></span></div><div class="signal-chart"><svg viewBox="0 0 360 70"><path d="M0 53L18 46L38 49L55 30L75 37L95 20L115 28L135 19L153 37L174 29L193 34L212 13L232 20L252 12L270 24L290 10L310 16L331 6L360 13"/></svg></div><div class="signal-footer"><span>Trace → Evaluate</span><span>Baseline → Monitor</span></div></div><div class="art-bottom"><span>04</span><span>Make AI behavior visible. ↗</span></div></div>
+          <div class="project-body"><p class="project-type">AI OBSERVABILITY <span>2026 · CONTRIBUTOR</span></p><h3>Enterprise AI observability</h3><p>Understanding how AI behaves after deployment, across LLM, machine learning and computer vision systems.</p><div class="tags"><span>OpenTelemetry</span><span>Arize</span><span>Databricks Genie</span></div><details><summary>Read project details <span aria-hidden="true">+</span></summary><div class="project-detail"><h4>The challenge</h4><p>Identify useful signals for monitoring and evaluating enterprise AI throughout its lifecycle.</p><h4>My contribution</h4><p>Researched LLM observability for Databricks Genie, analyzed OpenTelemetry traces and spans, and evaluated Arize capabilities for model baselining, monitoring and drift detection.</p><h4>Focus</h4><p>Research and evaluation of meaningful monitoring metrics and post-deployment reliability.</p></div></details></div>
+        </article>
+      </div>
+      <p class="additional-label">MORE FROM MY WORK</p><div class="additional-projects">
+        <article class="compact-project" data-category="genai"><span class="compact-number">05</span><div><p class="project-type">MULTIMODAL AI · DEVELOPMENT LEAD</p><h3>FoodWise AI Assistance</h3><p>A multilingual assistant for menu discovery, comparison and post-order support, using LLMs and vision models.</p><div class="tags"><span>LangChain</span><span>Ragas</span><span>Azure OpenAI</span></div></div></article>
+        <article class="compact-project" data-category="genai"><span class="compact-number">06</span><div><p class="project-type">ENTERPRISE CHAT · CONTRIBUTOR</p><h3>Chat @ X</h3><p>Contributed to a secure workplace AI chat solution combining conversational AI and document processing.</p><div class="tags"><span>Azure Functions</span><span>Azure AI Search</span><span>Form Recognizer</span></div></div></article>
+        <article class="compact-project" data-category="data"><span class="compact-number">07</span><div><p class="project-type">ENERGY ANALYTICS · CONTRIBUTOR</p><h3>Intelligent Utility</h3><p>Contributed to an AI/ML framework for outage detection, usage forecasting, billing prediction and predictive maintenance.</p><div class="tags"><span>Azure ML</span><span>Power BI</span><span>Python</span></div></div></article>
+      </div><p class="project-footnote">Diagrams illustrate the problem space. Project summaries describe my own contributions.</p><p class="sr-only" id="filter-status" aria-live="polite"></p>
+    </section>
+    <section class="about-section" id="about" aria-labelledby="about-title"><div class="section-wrap about-layout section-space"><div><p class="eyebrow">02 / A LITTLE ABOUT ME</p><h2 id="about-title">An engineer’s mindset.<br>A consultant’s <span class="serif-word">perspective.</span></h2><div class="about-signature">Numaan Baig <span>↗</span></div><p class="about-location">BASED IN BENGALURU · BUILDING FOR ENTERPRISE</p></div><div class="about-copy"><p class="about-intro">The interesting part of AI is making it useful.</p><p>Over four years in AI and data consulting, I’ve worked across the full application lifecycle: understanding business needs, preparing data, building intelligent workflows, delivering APIs, and improving deployed systems.</p><p>Today, I’m an AI Consultant at IBM. Before that, I spent four years at Neudesic, leading GenAI delivery and helping engineering teams adopt agentic workflows and AI development tools.</p><p>I enjoy connecting the technical details with the bigger picture — and working with teams that care about both.</p><div class="about-principles"><span>Business context first</span><span>Hands-on delivery</span><span>Keep learning</span></div></div></div></section>
+    <section class="section-wrap section-space" id="experience" aria-labelledby="experience-title"><div class="section-heading"><div><p class="eyebrow">03 / THE JOURNEY</p><h2 id="experience-title">Experience that <span class="serif-word">compounds.</span></h2></div><a class="resume-link" href="https://bit.ly/resumeJan2023" target="_blank" rel="noopener">View current resume <span aria-hidden="true">↗</span><span class="sr-only"> (opens in a new tab)</span></a></div><div class="experience-list">
+      <article class="experience-item"><div class="experience-date">FEB 2026 — PRESENT<span class="current-label">CURRENT</span></div><div class="experience-company"><h3>IBM</h3><p>AI Consultant</p></div><div class="experience-description"><p>Delivering end-to-end GenAI applications and conversational features using LangGraph and Microsoft Agent Framework. Working with stakeholders to connect AI capabilities to business needs.</p><div class="tags"><span>Enterprise GenAI</span><span>Multi-agent workflows</span><span>AI observability</span></div></div></article>
+      <article class="experience-item"><div class="experience-date">FEB 2022 — JAN 2026</div><div class="experience-company"><h3>Neudesic</h3><p>Data & AI Senior Consultant</p><small>An IBM company</small></div><div class="experience-description"><p>Translated client requirements into AI applications, led an internal Agentic SDLC initiative, and delivered GenAI training. Built RAG and LLM applications and supported deployed solutions.</p><div class="tags"><span>Technical leadership</span><span>RAG applications</span><span>Team enablement</span></div></div></article>
+      <article class="experience-item"><div class="experience-date">NOV 2021 — FEB 2022</div><div class="experience-company"><h3>Ushur</h3><p>SRE Intern</p></div><div class="experience-description"><p>Supported infrastructure monitoring, refined Zabbix templates and alerting logic, and validated Dynatrace telemetry to improve observability and issue detection.</p><div class="tags"><span>Zabbix</span><span>Dynatrace</span><span>Reliability engineering</span></div></div></article>
+    </div></section>
+    <section class="section-wrap skills-section" id="skills" aria-labelledby="skills-title"><div class="section-heading"><div><p class="eyebrow">04 / MY TOOLKIT</p><h2 id="skills-title">The right tools.<br><span class="serif-word">For the right problem.</span></h2></div><p>Depth in the Microsoft AI ecosystem.<br>Flexibility across the modern AI stack.</p></div><div class="skills-grid"><div><span class="skill-index">01</span><h3>AI & orchestration</h3><p>LangGraph · LangChain · Microsoft Agent Framework · RAG · Prompt engineering · LLM evaluation · GPT · Llama · Mistral · Multimodal models</p></div><div><span class="skill-index">02</span><h3>Backend & cloud</h3><p>Python · FastAPI · Flask · REST APIs · Azure OpenAI · Azure Functions · App Service · GitHub Actions · GitHub Copilot</p></div><div><span class="skill-index">03</span><h3>Data & retrieval</h3><p>Databricks · RisingWave · Kafka · dbt · PySpark · SQL Server · Cosmos DB · Neo4j · Azure AI Search · ChromaDB · Weaviate</p></div><div><span class="skill-index">04</span><h3>Evaluation & analytics</h3><p>OpenTelemetry · Arize · Ragas · Power BI · Tableau · Model monitoring · Drift detection research · Data exploration</p></div></div><div class="credentials" id="education"><div><p class="eyebrow">EDUCATION</p><h3>B.E. Computer Science & Engineering</h3><p>Dr. T Thimmaiah Institute of Technology · VTU<br>2021 · CGPA 8.15/10</p></div><div><p class="eyebrow">CREDENTIALS & CONTINUED LEARNING</p><div class="credential-tags"><span>IBM Generative & Agentic AI Foundation · 2026</span><span>Microsoft Azure AI Engineer Associate · 2022</span><span>Microsoft Azure AI Fundamentals · 2022</span><span>Microsoft Azure Fundamentals · 2023</span><span>Databricks Lakehouse Fundamentals</span><span>Docker for DevOps Engineers</span></div></div></div></section>
+    <section class="contact-section" id="contact" aria-labelledby="contact-title"><div class="section-wrap section-space"><div class="contact-intro"><p class="eyebrow"><span class="status-dot"></span> 05 / LET’S BUILD WHAT’S NEXT</p><h2 id="contact-title">Good AI starts with<br>a <span class="serif-word">conversation.</span></h2><p>I’m looking for an AI engineering role with a team building practical enterprise systems.<br>Open to relocation and remote work across the Gulf, Europe and the US.</p></div><div class="contact-options"><div class="contact-option"><span class="option-index">01 / JOIN YOUR TEAM</span><h3>Looking for an AI engineer?</h3><p>Hiring for AI Engineer, GenAI Engineer or Applied AI Engineer? Let’s discuss the team, scope, location and work arrangement.</p><a class="button button-light" href="mailto:numaangj@gmail.com?subject=AI%20engineering%20opportunity">Talk about a role <span aria-hidden="true">↗</span></a></div><div class="contact-option"><span class="option-index">02 / WORK ON A PROJECT</span><h3>Need help moving AI forward?</h3><p>RAG applications, agentic workflows, AI evaluations or a hands-on technical discovery engagement.</p><a class="text-link" href="mailto:numaangj@gmail.com?subject=Freelance%20AI%20project">Discuss your project <span aria-hidden="true">↗</span></a></div></div><div class="contact-direct"><div class="email-connect"><span class="email-kicker">START A CONVERSATION</span><a class="email-link" href="mailto:numaangj@gmail.com"><span class="email-address">numaangj@gmail.com</span><span class="email-arrow" aria-hidden="true">↗</span></a><div class="email-tools"><button class="copy-email" type="button" hidden><span aria-hidden="true">▣</span> Copy email</button><span class="email-feedback" aria-live="polite" role="status">A role, a team, a problem worth solving.</span></div></div><div class="contact-social"><a href="https://www.linkedin.com/in/m-shoaib-numaanulla-b-7b64a510b/" target="_blank" rel="noopener">LinkedIn ↗<span class="sr-only"> (opens in a new tab)</span></a><a href="https://github.com/ShoaibNumaan" target="_blank" rel="noopener">GitHub ↗<span class="sr-only"> (opens in a new tab)</span></a></div></div></div></section>
+  </main>
+  <footer class="section-wrap"><a class="footer-brand" href="#lead">nb<span>.</span></a><p>© <span id="year">2026</span> Numaan Baig. Built with intention.</p><a href="#lead">Back to top ↑</a></footer>
 </body>
-
 </html>
